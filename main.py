@@ -1,6 +1,13 @@
 import json
+import os
 from pytube import YouTube
 from moviepy.editor import AudioFileClip
+
+if not os.path.isdir('audio_files'):
+    os.makedirs('audio_files')
+
+if not os.path.isdir('cut_files'):
+    os.makedirs('cut_files')
 
 if __name__ == '__main__':
     # Load data from json file
